@@ -1,0 +1,8 @@
+add_rules("mode.debug", "mode.release")
+add_requires("boost",{configs = {all = true}})
+add_requires("sdl2")
+target("c")
+    set_kind("binary")
+    add_files("src/*.cpp")
+    add_packages("boost")
+    add_packages("sdl2")

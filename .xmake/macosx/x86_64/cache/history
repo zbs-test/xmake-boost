@@ -1,0 +1,17 @@
+{
+    cmdlines = {
+        "xmake check",
+        "xmake l /Users/zz/.vscode/extensions/tboox.xmake-vscode-2.0.9/assets/update_intellisense.lua .vscode",
+        "xmake l /Users/zz/.vscode/extensions/tboox.xmake-vscode-2.0.9/assets/config.lua",
+        "xmake check",
+        "xmake l /Users/zz/.vscode/extensions/tboox.xmake-vscode-2.0.9/assets/explorer.lua",
+        "xmake l /Users/zz/.vscode/extensions/tboox.xmake-vscode-2.0.9/assets/update_intellisense.lua .vscode",
+        "xmake l /Users/zz/.vscode/extensions/tboox.xmake-vscode-2.0.9/assets/config.lua",
+        "xmake l /Users/zz/.vscode/extensions/tboox.xmake-vscode-2.0.9/assets/explorer.lua",
+        "xmake check",
+        "xmake build -w c",
+        "xmake run c",
+        "xmake lua private.xrepo scan",
+        "xmake check"
+    }
+}
