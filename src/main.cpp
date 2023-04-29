@@ -1,30 +1,33 @@
+#include <boost/version.hpp>
+#include <boost/asio.hpp>
+#include <string>
+#include <SDL.h>
+#include <iostream>
+#include <boost/timer.hpp>
+#include <boost/progress.hpp>
+#include <vector>
+#include <fstream>
+using namespace std;
+using namespace boost;
 
- #include <boost/asio.hpp> 
- #include <string> 
- #include <SDL.h>
 
- // it provides a service as server side
- boost::asio::io_service io_service; 
- boost::asio::ip::tcp::endpoint endpoint(boost::asio::ip::tcp::v4(), 80); 
- boost::asio::ip::tcp::acceptor acceptor(io_service, endpoint); 
- boost::asio::ip::tcp::socket sock(io_service); 
- std::string data = "HTTP/1.1 200 OK\r\nContent-Length: 13\r\n\r\nHello, world!"; 
- 
- void write_handler(const boost::system::error_code &ec, std::size_t bytes_transferred) 
- { 
- } 
- 
- void accept_handler(const boost::system::error_code &ec) 
- { 
-   if (!ec) 
-   { 
-     boost::asio::async_write(sock, boost::asio::buffer(data), write_handler); 
-   } 
- } 
- 
- int main() 
- { 
-   acceptor.listen(); 
-   acceptor.async_accept(sock, accept_handler); 
-   io_service.run(); 
- } 
+int main()
+{
+    cout << BOOST_VERSION << endl;
+    timer t ;
+    cout << t.elapsed_max() << endl;
+    t.restart();
+    cout << t.elapsed_min() << endl;
+
+    progress_timer pt;
+    cout << pt.elapsed() << endl;
+    vector<string> v(100);
+    v.at(0) = "haha";
+
+    ofstream fs("./pro.txt");
+    progress_display pd(v.size());
+    for (auto &x:v){
+        fs<<x<<endl;
+        ++pd;
+    }
+}

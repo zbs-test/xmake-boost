@@ -1,0 +1,11 @@
+[
+{
+  "directory": "/Users/zz/CLionProjects/x/xmake-boost",
+  "arguments": ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang", "-c", "-Qunused-arguments", "-target", "x86_64-apple-macos12.6", "-isysroot", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk", "-g", "-O0", "-std=c++17", "-D_THREAD_SAFE", "-I", "/Users/zz/.xmake/packages/b/boost/1.81.0/d67836a15f89412aa0014c3c609beb8b/include", "-I", "/usr/local/include", "-I", "/usr/local/include/SDL2", "-o", "build/.objs/c/macosx/x86_64/debug/src/main.cpp.o", "src/main.cpp"],
+  "file": "src/main.cpp"
+},
+{
+  "directory": "/Users/zz/CLionProjects/x/xmake-boost",
+  "arguments": ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang", "-c", "-Qunused-arguments", "-target", "x86_64-apple-macos12.6", "-isysroot", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk", "-g", "-O0", "-std=c++17", "-I", "/Users/zz/.xmake/packages/b/boost/1.81.0/d67836a15f89412aa0014c3c609beb8b/include", "-o", "build/.objs/test/macosx/x86_64/debug/test/test.cpp.o", "test/test.cpp"],
+  "file": "test/test.cpp"
+}]
